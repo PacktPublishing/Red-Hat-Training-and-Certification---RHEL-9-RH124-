@@ -1,0 +1,39 @@
+vi /etc/yum.repos.d/localyum.repo
+
+[BaseOS]
+name=RHEL 9 - BaseOS
+metadata_expire=-1
+gpgcheck=1
+enabled=1
+baseurl=file:///run/media/root/RHEL-9-2-0-BaseOS-x86_64/BaseOS/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+
+[AppStream]
+name=RHEL 9 - AppStream
+metadata_expire=-1
+gpgcheck=1
+enabled=1
+baseurl=file:///run/media/root/RHEL-9-2-0-BaseOS-x86_64/AppStream/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+
+vim /etc/yum/pluginconf.d/subscription-manager.conf
+enabled=0
+
+
+RHEL 9.2 dependencies for virtualbox Guest Additions:
+
+bison-3.7.4-5.el9.x86_64
+gcc-11.3.1-2.1.el9.x86_64
+kernel-devel-5.14.0-162.6.1.el9_1.x86_64
+m4-1.4.19-1.el9.x86_64
+zlib-devel-1.2.11-34.el9.x86_64
+elfutils-libelf-devel-0.187-5.el9.x86_64
+glibc-devel-2.34-40.el9.x86_64
+kernel-headers-5.14.0-162.6.1.el9_1.x86_64
+make-4.3-7.el9.x86_64
+flex-2.6.4-9.el9.x86_64
+glibc-headers-2.34-40.el9.x86_64
+libxcrypt-devel-4.4.18-3.el9.x86_64
+openssl-devel-3.0.1-43.el9_0.x86_64
+
+All above mentioned dependent rpm packages are available in Red hat 9.1 DVD BaseOS/Packages and AppStream/Packages Directory.
